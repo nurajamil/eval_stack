@@ -7,9 +7,9 @@ sys.path.append(ROOT_DIR)
 from .base_metric import EvaluationMetric
 from .metrics_registry import register_metric
 
-from common.logger_utils import setup_logger
+from ...utils.logging_utils import setup_logging
 
-logger = setup_logger("accuracy", log_file="logs/evaluation_manager.log")
+logger = setup_logging("accuracy", log_file="logs/evaluation_manager.log")
 
 @register_metric
 class AccuracyMetric(EvaluationMetric):

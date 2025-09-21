@@ -7,13 +7,12 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../"))
 sys.path.append(ROOT_DIR)
 
 # Import files
-from .base_engine import EvaluatingEngine
-#from runner import run_metrics_for_engine
-from .engines_registry import register_engine
-from metrics.metrics_registry import get_metrics_for_engine
-from common.logger_utils import setup_logger
+from ..base_engine import EvaluatingEngine
+from ..engines_registry import register_engine
+from ...metrics.metrics_registry import get_metrics_for_engine
+from ....utils.logging_utils import setup_logging
 
-logger = setup_logger("ragas_engine", log_file="logs/evaluation_manager.log")
+logger = setup_logging("ragas_engine", log_file="logs/evaluation_manager.log")
 
 
 @register_engine

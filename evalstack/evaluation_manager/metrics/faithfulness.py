@@ -8,9 +8,9 @@ from .base_metric import EvaluationMetric
 from .metrics_registry import register_metric
 
 
-from common.logger_utils import setup_logger
+from ...utils.logging_utils import setup_logging
 
-logger = setup_logger("faithfulness", log_file="logs/evaluation_manager.log")
+logger = setup_logging("faithfulness", log_file="logs/evaluation_manager.log")
 
 @register_metric
 class FaithfulnessMetric(EvaluationMetric):

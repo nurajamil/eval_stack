@@ -1,0 +1,3 @@
+sentence_transformers
+openai
+python-env

@@ -7,10 +7,10 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../"))
 sys.path.append(ROOT_DIR)
 
 # Import files
-from common.logger_utils import setup_logger
+from ...utils.logging_utils import setup_logging
 from .base_metric import EvaluationMetric
 
-logger = setup_logger("metrics_registry", log_file="logs/evaluation_manager.log")
+logger = setup_logging("metrics_registry", log_file="logs/evaluation_manager.log")
 
 _METRICS_REGISTRY: List[EvaluationMetric] = []
 
